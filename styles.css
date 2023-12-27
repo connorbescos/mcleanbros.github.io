@@ -1,15 +1,23 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset some basic elements */
+html, body {
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #333;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box; /* Border-box sizing model */
 }
 
+/* Apply border-box model to all elements */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Style for the header, including the logo */
 header {
     background-color: #cc0000;
     padding: 20px;
     text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's width */
 }
 
 .logo {
@@ -17,16 +25,21 @@ header {
     height: auto;
 }
 
+/* Main content container styling */
 .content-container {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
     padding: 20px;
+    box-sizing: border-box; /* Include padding in the width */
 }
 
+/* Section styling */
 section {
     margin-bottom: 20px;
 }
 
+/* Unordered list and list items styling in the services section */
 section#services ul {
     list-style: none;
     padding: 0;
@@ -37,21 +50,23 @@ section#services ul li {
     margin-bottom: 5px;
     padding: 10px;
     border-left: 5px solid #cc0000;
+    box-sizing: border-box; /* Include padding and border in the width */
 }
 
+/* Footer styling */
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in the width */
 }
 
+/* Media query for mobile devices */
 @media (max-width: 768px) {
     .content-container {
-        width: 95%;
+        padding: 10px;
     }
 
     header {
